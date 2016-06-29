@@ -1,0 +1,18 @@
+<select ng-options="color.text for color in colors" ng-model="color"
+        ng-change="changeColor()">
+</select>
+
+<select ng-options="color as color.text group by color.type for color in colors" ng-model="color"
+        ng-change="changeColor()">
+</select>
+
+<span>
+    <p ng-class="curentColor.class">Some text
+    </p>
+    </span>
+
+$scope.colors = [
+<input type="text" ng-model="input1">
+<input type="text" ng-model="input2">
+];
+<div ng-repeat="color in colors | orderBy: -text | filter:{text:input1}">{{color.text}}</div>
