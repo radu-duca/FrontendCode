@@ -1,0 +1,6 @@
+/Day3/bower_components
+/Day3/node_modules
+/Day3/.idea
+/Day 4/bower_components
+/Day 4/node_modules
+/Day 4/.idea
