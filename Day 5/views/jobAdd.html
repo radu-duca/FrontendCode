@@ -1,0 +1,63 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Add job</h2>
+    </div>
+    <div class="panel-body">
+    <ng-form name="jobAdd">
+        <div class="row">
+            <div class="col-lg-6">
+                <!--TODO#HR3-->
+                <div class="form-group" ng-class="{ 'has-error': jobAdd.jobId.$invalid }">
+                    <!--TODO#HR2-->
+                    <label for="jobId">jobId:</label>
+                    <input type="text" id="jobId" name="jobId" class="form-control" ng-model="job.jobId" required>
+
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <!--TODO#HR3-->
+                <div class="form-group" ng-class="{ 'has-error': jobAdd.jobTitle.$invalid }">
+                    <!--TODO#HR2-->
+                    <label for="jobTitle">jobTitle:</label>
+                    <input type="text" id="jobTitle" name="jobTitle" class="form-control" ng-model="job.jobTitle" required>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <!--TODO#HR3-->
+                <div class="form-group" ng-class="{ 'has-error': jobAdd.maxSalary.$invalid }">
+                    <!--TODO#HR2-->
+                    <label for="maxSalary">maxSalary:</label>
+                    <input type="number" id="maxSalary" name="maxSalary" class="form-control" ng-model="job.maxSalary" required>
+
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <!--TODO#HR3-->
+                <div class="form-group" ng-class="{ 'has-error': jobAdd.phoneNumber.$invalid }">
+                    <!--TODO#HR2-->
+                    <label for="minSalary">minSalary:</label>
+                    <input type="number" id="minSalary" name="minSalary" class="form-control" ng-model="job.minSalary" required>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-7">
+                <div class="container">
+                    <!--TODO#HR4-->
+
+                    <input type="button" ng-disabled="jobAdd.$invalid" ng-click="create(job)" value="Save"/>
+                    <input type="button" ng-click="reset()" value="Reset"/>
+
+                </div>
+            </div>
+        </div>
+    </ng-form>
+
+    </div>
+</div>
